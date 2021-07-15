@@ -18,10 +18,16 @@
  * @}
  */
 
-#include <stdio.h>
 
-#include "shell.h"
-#include "msg.h"
+/* This example as been modified by Bairon Sensente for a technical
+test from Hackerspace San Salvador
+*/
+
+
+#include <stdio.h>
+/*
+ #include "shell.h"
+#include "msg.h" 
 
 #define MAIN_QUEUE_SIZE     (8)
 static msg_t _main_msg_queue[MAIN_QUEUE_SIZE];
@@ -33,18 +39,27 @@ static const shell_command_t shell_commands[] = {
     { NULL, NULL, NULL }
 };
 
+*/
+
 int main(void)
 {
+	
+	
     /* we need a message queue for the thread running the shell in order to
      * receive potentially fast incoming networking packets */
+	/*
     msg_init_queue(_main_msg_queue, MAIN_QUEUE_SIZE);
     puts("RIOT network stack example application");
+	*/
 
     /* start shell */
+	/*
     puts("All up, running the shell now");
     char line_buf[SHELL_DEFAULT_BUFSIZE];
     shell_run(shell_commands, line_buf, SHELL_DEFAULT_BUFSIZE);
+	/
 
     /* should be never reached */
+	printf("¡Soy Bairon quiero pertencer al Hackerspace San Salvador!\n");
     return 0;
 }
